@@ -4,16 +4,13 @@
 This is C++ implementation in Qt environment for rank ordering method to evaluate subjectively a set of images. To use the software, there are some harcoded parameters you need to modify in myguiwidget.cpp:
 
     #define CONFIGFILEPATH "f:\\rank_config.txt" // Defines the name and location of the config file
-  
     #define RESULT_LOG_FILE "f:\\rank_log.txt" // Defines the name and location of the output log file
-  
     #define RESULT_CS_FILE "f:\\rank_result.csv" // Defines the name and location of the results file
-  
     #define NUM_PRACTICE_TESTS 1 // Defines the number of practice tests (not included in the results)
   
 In the beginning, the test software is asking for a seed number for randomizing the order of test cases and the initial order of images in each test case. You can use for eaxample running numbering for each test user (1,2,3...) to make sure that the order is different for each person. If you leave this empty, the software follows the order of test cases and images defined in the config file.
 
-An example of a content in a config file is given below. An empty line (or any line that does not contain a valid file name or '#" in the beginning) is used as a delimiter between test cases. Hash '#' can be used in a beginning of a line to mark comments (those lines are not interpreted as delimiter lines). The first NUM_PRACTICE_TESTS test cases are not included to the results, and their order is always the same (i.e. they are not randomized).
+An example of a content in a config file is given below. An empty line (or any line that does not contain a valid file name or '#" in the beginning) is used as a delimiter between test cases. Hash '#' can be used in a beginning of a line to mark comments (those lines are not interpreted as delimiter lines). The first NUM_PRACTICE_TESTS test cases are not included to the results, and their order is always the same (i.e. they are not randomized). Note that you need to be careful to write the file name correctly: a non-existing file will be interpreted a delimiter line! Verify your setup without seed number before any real experiments.
 
     # An example config file
     # Let's assume that NUM_PRACTICE_TESTS is 2
@@ -46,7 +43,7 @@ In the RESULT_CS_FILE, the software will write the results in comma separated va
 
     56,4,2,1,5,4,3
     
-means that user 56 has evaluated test case 4 so that image 2 is the best, image 1 is the second best, image 5 is the third best, image 4 is the fourth best, and image 3 is the worst.
+means that user 56 has evaluated test case 4 so that image 2 is the best, image 1 is the second best, image 5 is the third best, image 4 is the fourth best, and image 3 is the worst. The log file RESULT_LOG_FILE will contain more detailed information about the experiment.
     
 If you use the software in your research, kindly cite the following publication:
 
