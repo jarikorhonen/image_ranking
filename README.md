@@ -1,7 +1,7 @@
 # image_ranking
 ### Implementation of subjective ranking of test images
 
-This is C++ implementation in Qt environment for rank ordering method to evaluate subjectively a set of images. To use the software, there are some harcoded parameters you need to modify in myguiwidget.cpp:
+This is C++ implementation in Qt environment for rank ordering method to evaluate subjectively a set of images. To use the software, there are some hardcoded parameters you need to modify in myguiwidget.cpp:
 
     #define CONFIGFILEPATH "f:\\rank_config.txt" // Defines the name and location of the config file
     #define RESULT_LOG_FILE "f:\\rank_log.txt" // Defines the name and location of the output log file
