@@ -49,4 +49,4 @@ If you use the software in your research, kindly cite the following publication:
 
 L. Bie, X. Wang, and J. Korhonen, “Subjective assessment of post-processing methods for low light consumer photos,” 
 *IEEE International Conference on Quality of Multimedia Experience (QoMEX’18)*, Sardinia, Italy, 
-May 2018. (Accepted for publication.)
+May 2018.
